@@ -1,0 +1,5 @@
+altura=input("Digite a altura: ")
+largura=input("Digite a largura: ")
+area=float(altura)*float(largura)
+litros=float(area/2.0)
+print(f"Você precisa de {litros} litros")
