@@ -19,6 +19,8 @@ weight=78.7
 print("end=...sep=...")
 #end ex:\n
 #sep->é->para->separar->str->por->um->mesmo->parâmetro->ex:"->"
+#.upper() aceita valores minusculos e maiusculos
+#.strip() tira os espaços
 type()
 input()
 import math #importa a biblioteca math
