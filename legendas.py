@@ -34,4 +34,8 @@ num=random.randint(1,5) #randint= função que importa numeros aleatórios
 "OBS: selecione uma biblioteca e aperte f12 para ver os detalhes internos"
 "indentação->valores dentro de uma condição estão na linha abaixo com um espaço"
 
+lista = list() == []#Função que guarda valores
+dicionarios = dict() == {}#Possui uma chave e um valor ex: "chave": "valor"
+tuplas = tuple() == ()#Lista imutável
+conjuntos = set()#Dicionario com um valor
 
