@@ -15,4 +15,8 @@ for p in range(f,q,v):
 print("")
 print(f"A razão: {v}")
 termos()
+<<<<<<< HEAD
 #pequeno detalhe: eu só pergunto quantos termos ele quer ver a mais, mas eu não mostro os termos
+=======
+#pequeno detalhe: eu só pergunto quantos termos ele quer ver a mais, mas eu não mostro os termos
+>>>>>>> 8c8a1ebcb13b11bffe8e9993e72960d1b1caccc4

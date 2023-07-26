@@ -13,4 +13,8 @@ def fib():
       break
     else:
       print(N)
+<<<<<<< HEAD
 fib()
+=======
+fib()
+>>>>>>> 8c8a1ebcb13b11bffe8e9993e72960d1b1caccc4
