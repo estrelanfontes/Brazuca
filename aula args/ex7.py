@@ -1,5 +1,5 @@
 p=(int(input("Sequencia fibonacci até o numero: ")))
-def fib():
+def fib(p):
   n1=1
   n2=1
   N=n1+n2
@@ -11,4 +11,4 @@ def fib():
     print(f"O numero {p} não pertence a sequencia")
   else:
       print(p)
-fib()
+fib(p)
