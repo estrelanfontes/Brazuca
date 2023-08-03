@@ -22,3 +22,5 @@ print(modulo.fatorial(5))
 print(modulo.dobro(5))
 OU
 from modulo import fatorial, dobro"""
+
+"from aulas import sys"

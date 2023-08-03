@@ -1,1 +1,2 @@
-from aulas import sys
+from my_functions import saudação
+saudação()

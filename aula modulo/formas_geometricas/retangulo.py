@@ -1,0 +1,4 @@
+def area_retangulo():
+    base = float(input("Base:  "))
+    altura = float(input("Altura:  "))
+    print(f"Area: {base*altura}")
