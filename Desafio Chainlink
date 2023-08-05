@@ -1,0 +1,42 @@
+Criar um gerador de dados de rpg, por exemplo : 1d6, 1d4 , 1d8 que utilize o gerador de nuemros aleatórios da chainlink
+OBS: projeto incompleto
+O usuário precisará:
+--> ter acesso a um contrato inteligente Chainlink que forneça essa funcionalidade. 
+--> ter o endereço do contrato e a ABI corretos.
+
+Gerador de dados de RPG:
+
+```python
+from web3 import Web3
+import json
+
+# Conecte-se a uma rede Ethereum usando o Web3.py
+w3 = Web3(Web3.HTTPProvider(input('Digite o endpoint RPC correto da rede Ethereum em que o contrato está implantado:  ')))
+
+# Carregue o contrato inteligente que utiliza a API "Random Number Consumer" da Chainlink
+contract_address = input('Endereço do contrato:  ')  # Endereço do contrato
+contract_abi = [input('ABI do contato:   ')] # ABI do contrato
+
+contract = w3.eth.contract(address=contract_address, abi=contract_abi)
+
+# Função para gerar um número aleatório entre um mínimo e um máximo
+def gerar_numero_aleatorio(minimo, maximo):
+    numero_aleatorio = contract.functions.getRandomNumber().call()
+    return numero_aleatorio % (maximo - minimo + 1) + minimo
+
+# Função para rolar um dado
+def rolar_dado(dado):
+    quantidade, faces = dado.split('d')
+    quantidade = int(quantidade)
+    faces = int(faces)
+
+    resultado = []
+    for _ in range(quantidade):
+        resultado.append(gerar_numero_aleatorio(1, faces))
+    
+    return resultado
+
+# Exemplo de uso
+resultado = rolar_dado('1d6')
+print(f"Resultado do dado 1d6: {resultado}")
+```
