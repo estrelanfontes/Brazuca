@@ -39,3 +39,16 @@ dicionarios = dict() == {}#Possui uma chave e um valor ex: "chave": "valor"
 tuplas = tuple() == ()#Lista imutável
 conjuntos = set()#Dicionario com um valor
 
+# para atualizar os arquivos do abelha
+# copia o link do repositorio
+# abre um novo terminal do git bash 
+# digite: git clone "https://github.com/Rodrigopaiva44/aulas.git" ...apague o sinal ~ se houver
+# digite: cd aulas ...aulas é o nome do repositorio
+# digite: git pull 
+
+"""if :
+else:
+
+match:
+case:
+case_:"""
