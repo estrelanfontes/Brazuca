@@ -1,3 +1,68 @@
 https://convertio.co/pt/pdf-txt/
 https://www.imagetotext.info/br/imagem-em-texto
 #Remember that the commits of classes are't showing up on github
+
+program on python
+
+#1° tentativa
+
+import pytesseract
+from PIL import Image
+
+def image_to_text(image_path):
+    # Abre a imagem
+    image = Image.open(image_path)
+    
+    # Converte a imagem para texto utilizando o Tesseract
+    text = pytesseract.image_to_string(image)
+    
+    # Retorna o texto convertido
+    return text
+
+# Caminho da imagem que você deseja converter
+image_path = "C:/Users/brazuca/Desktop/Estrela/teste.jpg"
+
+# Chama a função para converter a imagem em texto
+converted_text = image_to_text(image_path)
+
+# Imprime o texto convertido
+print(converted_text)
+#preciso instalar "Tesseract OCR "
+
+#2°tentativa
+"""
+import cv2
+import keras_ocr
+
+def image_to_text(image_path):
+    # Carrega a imagem utilizando o OpenCV
+    img = cv2.imread(image_path)
+
+    # Converte a imagem para escala de cinza
+    gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+    # Realiza o pré-processamento da imagem
+    # (por exemplo, binarização, remoção de ruído, segmentação de caracteres)
+
+    # Utiliza o Keras-OCR para converter a imagem em texto
+    pipeline = keras_ocr.pipeline.Pipeline()
+    predictions = pipeline.recognize([gray])
+
+    # Extrai o texto das previsões
+    text = ""
+    for prediction in predictions[0]:
+        text += prediction[0] + " "
+
+    # Retorna o texto convertido
+    return text
+
+# Caminho da imagem que você deseja converter
+image_path = "C:/Users/brazuca/Desktop/Estrela/teste.jpg"
+
+# Chama a função para converter a imagem em texto
+converted_text = image_to_text(image_path)
+
+# Imprime o texto convertido
+print(converted_text)
+"""#preciso instalar "msvcp140.dll" e "msvcp140_1.dll"
+
